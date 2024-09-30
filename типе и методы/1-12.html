@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>J gtlfujut...</title> 
+</head> 
+<body> 
+ 
+<script> 
+    
+    let firstName = "Виктор"; 
+    let lastName = "Карамзин"; 
+    let patronymic = "Геннадьевич"; 
+    let position = "Преподаватель специальных дисциплин"; 
+    let educationLevel = "Высшее"; 
+    let category = "Первая"; 
+     
+    let educationInstitutions = ["Московский государственный институт электронной техники (технический университет)", 
+        "Санкт-Петербургский государственный университет (СПбГУ)" 
+    ]; 
+     
+    let subjects = [ "Информатика", 
+        "Основы программирования", 
+        "Инженерная графика" 
+    ]; 
+ 
+    let teacher = { 
+        fullName: `${lastName} ${firstName} ${patronymic}`,  
+        position: position, 
+        educationLevel: educationLevel, 
+        category: category, 
+        educationInstitutions: educationInstitutions, 
+        subjects: subjects 
+    }; 
+ 
+    document.write(teacher.fullName + "<br>"); 
+    document.write("Должность: " + teacher.position + "<br>"); 
+    document.write("Уровень образования: " + teacher.educationLevel + "<br>"); 
+    document.write("Категория: " + teacher.category + "<br>"); 
+     
+    document.write("Образование: <br>"); 
+    for (let institution of teacher.educationInstitutions) { 
+        document.write("- " + institution + "<br>"); 
+    } 
+ 
+    document.write("Дисциплины:"); 
+    document.write("<ul>"); 
+    for (let subject of teacher.subjects) { 
+        document.write("<li>" + subject + "</li>"); 
+    } 
+    document.write("</ul>"); 
+
+</script> 
+ 
+</body> 
+</html>
